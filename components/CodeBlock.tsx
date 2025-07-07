@@ -19,7 +19,7 @@ const CodeBlock = ({
       <Highlight
         theme={themes.dracula} // You can change this to any theme you like
         code={code}
-        language={language as any}
+        language={language as string}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
