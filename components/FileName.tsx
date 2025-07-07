@@ -6,12 +6,12 @@ const FileName = ({ name }: { name: string }) => {
 
   return (
     <span className="filename inline-flex items-center text-base font-mono">
-      &apos;
+      `
       {directory && (
         <span className="text-gray-500 dark:text-gray-300">{directory}</span>
       )}
       <span className="text-gray-800 dark:text-gray-100">{fileName}</span>
-      &apos;
+      `
     </span>
   );
 };
