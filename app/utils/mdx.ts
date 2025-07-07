@@ -45,7 +45,6 @@ export const getPostMetadata = cache(async (): Promise<PostMetadata[]> => {
 
 export const getPostContent = cache(async (slug: string) => {
   try {
-    const decodedSlug = decodeURIComponent(slug);
     const fullPath = path.join(postsDirectory, slug, "index.mdx");
 
     if (!fs.existsSync(fullPath)) {
