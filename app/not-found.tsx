@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { AlertTriangle, Home } from "lucide-react";
 
@@ -10,7 +9,7 @@ function NotFound() {
         <h1 className="text-6xl font-bold mb-4">404</h1>
         <h2 className="text-3xl font-semibold mb-4">Oops! Page Not Found</h2>
         <p className="text-lg mb-8">
-          The page you're looking for seems to have wandered off.
+          The page you&apos;re looking for seems to have wandered off.
         </p>
         <div className="space-y-4">
           <Link

@@ -1,6 +1,5 @@
 import { format, parseISO } from "date-fns";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { GetStaticProps } from "next";
 import { getPostContent, getPostMetadata } from "@/app/utils/mdx";
 import Image from "next/image";
 import components from "../../../components/MDXComponent";
