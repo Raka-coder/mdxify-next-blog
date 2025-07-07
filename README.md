@@ -4,10 +4,6 @@
 
 MDXify Blog is a modern, fast, and flexible blog platform built with Next.js 15 and MDX. It allows you to write your blog posts in Markdown with the power of JSX.
 
-## Demo
-
-([Demo]())
-
 ## Features
 
 - Next.js 15 with App Router
@@ -73,6 +69,7 @@ blogweb/
 
 To write content in MDXify Blog, you can use the `mdx` extension for your files. For example, if you have a post called `index.mdx`, you can write your content in it.
 
+create a new folder in the `contents/posts` directory.
 use `index.mdx` as the filename for your post.
 
 ## Customization
