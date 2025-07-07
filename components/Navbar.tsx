@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
 
   return (
     <nav className="flex items-center justify-between flex-wrap md:p-0 p-0 mb-8">
