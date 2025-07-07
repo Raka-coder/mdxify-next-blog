@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Custom variant for setup dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Styling for code blocks */
+pre {
+  margin: 1.5rem 0 !important;
+  padding: 1.5rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.9rem !important;
+  overflow-x: auto;
+}
+
+code {
+  font-family:
+    "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+.filename {
+  font-family:
+    "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}

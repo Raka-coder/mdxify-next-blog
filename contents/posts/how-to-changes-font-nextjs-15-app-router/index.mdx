@@ -1,0 +1,58 @@
+---
+title: "How to Change Fonts in Next.js 15 App Router"
+date: "2025-07-05"
+thumbnail: "/images/custom-font-nextjs.png"
+---
+
+# How to Change Fonts in Next.js 15 App Router: A Step-by-Step Guide
+
+Next.js 15 offers a streamlined approach to customizing fonts in your web applications. In this tutorial, we'll walk through the process of changing fonts using the new font system introduced in Next.js 13 and refined in version 15.
+
+## Step 1: Choose Your Font
+
+First, decide on the font you want to use. For this tutorial, we'll use **Inter** from Google Fonts as an example.
+
+## Step 2: Update your `layout.tsx`
+
+Open your `app/layout.tsx` file and import the Inter font from Google Fonts.
+
+```tsx
+/* Change type fonts to Inter */
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={inter.className}>
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+## Step 3: Update your `globals.css`
+
+Add the following CSS to your `globals.css` file:
+
+```css
+@import "tailwindcss";
+
+/* For example, using Inter font from Google Fonts in the body tag */
+body {
+  font-family: "Inter", sans-serif; /* Use your chosen font here */
+}
+```
+
+## Step 4: Check the result
+
+Now, when you run your Next.js application, you should see the Inter font applied to your entire application.
+
+By following these steps, you can easily change the font used in your Next.js 15 app.

@@ -1,0 +1,111 @@
+---
+title: "Optimizing Images in Next.js 13+ with next/image and App Router"
+date: "2025-07-05"
+thumbnail: "/images/next-images.png"
+---
+
+# Optimizing Images in Next.js 13+ with next/image and App Router
+
+Next.js provides a powerful Image component through the `next/image` module, which offers automatic image optimization. In this tutorial, we'll explore how to use this component effectively in a Next.js project using the App Router.
+
+## Why Use next/image?
+
+The `next/image` component offers several benefits:
+
+1. Automatic image optimization
+2. Responsive images
+3. Lazy loading
+
+## Basic Usage
+
+Let's start with a basic example of how to use the Image component:
+
+<FileName name="app/page.tsx" />
+
+```tsx
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Welcome to My Next.js App</h1>
+      <Image
+        src="/example.jpg"
+        alt="An example image"
+        width={500}
+        height={300}
+      />
+    </main>
+  );
+}
+```
+
+In this example, we're importing the Image component from next/image and using it to display an image located in the public directory.
+
+## Key Props
+
+The Image component accepts several props:
+
+- `src`: The source URL of the image.
+- `alt`: The alternative text for the image.
+- `width`: The width of the image in pixels.
+- `height`: The height of the image in pixels.
+- `sizes`: An array of media queries and their corresponding image sizes.
+- `priority`: A boolean value indicating whether the image should be prioritized.
+- `placeholder`: The placeholder to display while the image is loading.
+- `blurDataURL`: The base64-encoded data URL of the placeholder image.
+
+## Responsive Images
+
+To make images responsive, you can use the `sizes` prop to specify media queries and their corresponding image sizes. For example:
+
+<FileName name="app/page.tsx" />
+```tsx import Image from 'next/image'
+
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Welcome to My Next.js App</h1>
+      <Image
+        src="/example.jpg"
+        alt="An example image"
+        width={500}
+        height={300}
+        sizes="(max-width: 600px) 100vw, 50vw"
+      />
+    </main>
+  )
+}
+```
+
+In this example, the image will be displayed at 50% of the viewport width when the viewport width is less than 600px.
+
+## Lazy Loading
+
+By default, images are not lazy loaded. To enable lazy loading, set the `loading` prop to `"lazy"`:
+
+<FileName name="app/page.tsx" />
+```tsx
+import Image from 'next/image'
+export default function Home() {
+  
+  return (
+    
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Welcome to My Next.js App</h1>
+      <Image
+        src="/example.jpg"
+        alt="An example image"
+        width={500}
+        height={300}
+        loading="lazy"
+      />
+    </main>
+  )
+}
+```
+In this example, the image will be loaded only when it's in the viewport.
+
+## Conclusion
+
+The `next/image` component is a powerful tool for optimizing images in Next.js 13+. By using the Image component effectively, you can improve the performance and user experience of your Next.js app.
