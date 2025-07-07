@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   }));
 }
 
-interface PostPageProps {
+interface PageProps {
   params: {
     slug: string;
   };
@@ -25,7 +25,7 @@ interface PostPageProps {
   };
 }
 
-export default async function PostPage({ params }: PostPageProps) {
+export default async function PostPage({ params }: PageProps) {
   try {
     const { slug } = await params;
     const { metadata, content } = await getPostContent(slug);
