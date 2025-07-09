@@ -22,8 +22,6 @@ To get started with MDXify Blog, follow these steps:
 
 ```bash
 git clone https://github.com/Raka-coder/mdxify-next-blog
-
-cd blogweb
 ```
 2. Install the dependencies:
 ```bash
